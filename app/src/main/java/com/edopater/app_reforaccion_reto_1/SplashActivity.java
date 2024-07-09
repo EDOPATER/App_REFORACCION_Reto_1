@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
         imagen1.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent irAHome = new Intent(SplashActivity.this, BienvenidaActivity.class);
+                Intent irAHome = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(irAHome);
                 finish();
             }
