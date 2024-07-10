@@ -220,14 +220,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/buttonRegistro2"
                 android:layout_width="250dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="65dp"
                 android:layout_marginTop="5dp"
                 android:backgroundTint="#2E7D32"
-                android:text="REGISTRARSE"
+                android:text="Registrarse"
                 android:textSize="24sp" />
         </LinearLayout>
 
