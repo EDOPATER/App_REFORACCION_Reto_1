@@ -95,7 +95,7 @@
             android:layout_marginBottom="16dp">
 
             <Button
-                android:id="@+id/button00"
+                android:id="@+id/buttonPerfil"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_row="0"
@@ -104,7 +104,6 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
                 android:backgroundTint="@color/design_default_color_secondary"
-                android:onClick="onCellClick"
                 android:text="Perfil de Usuario"
                 android:textSize="10sp"
                 tools:visibility="visible" />

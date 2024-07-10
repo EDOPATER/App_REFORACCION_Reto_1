@@ -9,24 +9,24 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class panelControlActivity extends AppCompatActivity {
+public class perfilUsuarioActivity extends AppCompatActivity {
 
-    private Button A_Perfil;
+    private Button A_Panel;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_panel_control);
+        setContentView(R.layout.activity_perfil_usuario);
 
-        A_Perfil = findViewById(R.id.buttonPerfil);
+        A_Panel = findViewById(R.id.buttonVolverPanel);
 
-        A_Perfil.setOnClickListener(new View.OnClickListener() {
+        A_Panel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent next = new Intent(panelControlActivity.this, perfilUsuarioActivity.class);
-                startActivity(next);
+                Intent back = new Intent(perfilUsuarioActivity.this, panelControlActivity.class);
+                startActivity(back);
             }
         });
 
