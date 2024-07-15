@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".panelControlActivity">
+    tools:context=".informacionAmbActivity">
 
     <ImageView
         android:id="@+id/imagen1"
@@ -45,9 +45,9 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Panel de Control"
+                android:text="Información Ambiental"
                 android:textAlignment="center"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
 
         </LinearLayout>
 
@@ -108,7 +108,7 @@
                 tools:visibility="visible" />
 
             <Button
-                android:id="@+id/buttonEstadisticas"
+                android:id="@+id/button01"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
@@ -130,7 +130,6 @@
                 android:text="Comunidad y Redes Sociales"
                 android:backgroundTint="@color/design_default_color_secondary"
                 android:textSize="10sp"
-                android:textColor="@color/black"
                 android:onClick="onCellClick" />
 
             <Button
@@ -147,7 +146,7 @@
                 android:onClick="onCellClick" />
 
             <Button
-                android:id="@+id/buttonInformacion"
+                android:id="@+id/button11"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -167,9 +166,8 @@
                 android:layout_rowWeight="1"
                 android:backgroundTint="@color/design_default_color_secondary"
                 android:layout_margin="4dp"
-                android:text="Notificación"
+                android:text="Notificaciones Recordatorios"
                 android:textSize="10sp"
-                android:textColor="@color/black"
                 android:onClick="onCellClick" />
 
             <Button
@@ -195,7 +193,6 @@
                 android:text="Concejos y Recomendaciones"
                 android:backgroundTint="@color/design_default_color_secondary"
                 android:textSize="10sp"
-                android:textColor="@color/black"
                 android:onClick="onCellClick" />
 
             <Button
@@ -208,7 +205,6 @@
                 android:layout_margin="4dp"
                 android:text="Exportar Datos"
                 android:textSize="10sp"
-                android:textColor="@color/black"
                 android:onClick="onCellClick" />
 
         </GridLayout>

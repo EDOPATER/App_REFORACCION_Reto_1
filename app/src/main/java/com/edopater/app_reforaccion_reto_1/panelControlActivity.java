@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 public class panelControlActivity extends AppCompatActivity {
 
     private Button A_Perfil;
+    private Button A_Reg_Actividad;
+    private Button A_Reg_History;
+    private Button A_Reg_Estadisticas;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,6 +29,36 @@ public class panelControlActivity extends AppCompatActivity {
             @Override
             public void onClick (View v){
                 Intent next = new Intent(panelControlActivity.this, perfilUsuarioActivity.class);
+                startActivity(next);
+            }
+        });
+
+        A_Reg_Actividad = findViewById(R.id.button_RegAct);
+
+        A_Reg_Actividad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(panelControlActivity.this, registroActividadesPActivity.class);
+                startActivity(next);
+            }
+        });
+
+        A_Reg_History = findViewById(R.id.buttonHistory);
+
+        A_Reg_History.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(panelControlActivity.this, historialActividadesActivity.class);
+                startActivity(next);
+            }
+        });
+
+        A_Reg_Estadisticas = findViewById(R.id.buttonEstadisticas);
+
+        A_Reg_Estadisticas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(panelControlActivity.this, estadisticasActivity.class);
                 startActivity(next);
             }
         });

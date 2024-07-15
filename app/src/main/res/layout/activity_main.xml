@@ -36,29 +36,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="80dp"
             android:orientation="horizontal">
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="315dp"
+            android:layout_height="250dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
+            <VideoView
+                android:id="@+id/videoRefor"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Video Bienvenida App REFORACCIÓN"
-                android:textAlignment="center"
-                android:textSize="60sp" />
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="129dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <Button

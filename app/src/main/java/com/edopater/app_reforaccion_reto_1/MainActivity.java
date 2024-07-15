@@ -6,11 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.VideoView;
+import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
 
+    private VideoView videoRefor;
     private Button Registro;
     private Button Inicio;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        videoRefor = findViewById(R.id.videoRefor);
         Registro = findViewById(R.id.buttonRegistro);
         Inicio = findViewById(R.id.buttonInicio);
 
@@ -36,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(next);
     }
     });
+
+        // Asignación de la ruta del video que está en res/raw
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.video_reforestar;
+        videoRefor.setVideoURI(Uri.parse(path));
+
+        // Iniciar la reproducción del video
+        videoRefor.start();
+
   }
 }
 
