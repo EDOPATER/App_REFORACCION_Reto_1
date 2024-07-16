@@ -15,7 +15,6 @@ import com.edopater.app_reforaccion_reto_1.modelos.Usuario;
 
 public class registrarseActivity extends AppCompatActivity {
 
-    private Button A_Inicio;
     private EditText correoEditText;
     private EditText nombreEditText;
     private EditText apellidosEditText;
@@ -32,16 +31,6 @@ public class registrarseActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_registrarse);
 
-        A_Inicio = findViewById(R.id.botonRegistrarse2);
-
-        A_Inicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v){
-                Intent next = new Intent(registrarseActivity.this, InicioSesionActivity.class);
-                startActivity(next);
-            }
-        });
-
         // Inicializar vistas
         correoEditText = findViewById(R.id.correoEditText);
         nombreEditText = findViewById(R.id.nombreEditText);
@@ -54,6 +43,8 @@ public class registrarseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registrarUsuario();
+                Intent next = new Intent(registrarseActivity.this, InicioSesionActivity.class);
+                startActivity(next);
             }
         });
     }

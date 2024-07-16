@@ -85,7 +85,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/correoEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -101,7 +101,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/contrasenaEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
