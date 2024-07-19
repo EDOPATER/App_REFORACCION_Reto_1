@@ -3,12 +3,14 @@ package com.edopater.app_reforaccion_reto_1;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import android.annotation.SuppressLint;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.edopater.app_reforaccion_reto_1.modelos.Usuario;
@@ -47,6 +49,42 @@ public class registrarseActivity extends AppCompatActivity {
                 startActivity(next);
             }
         });
+
+        EditText passwordEditText = findViewById(R.id.contrasenaEditText);
+        EditText passwordConfEditText = findViewById(R.id.confirmarContrasenaEditText);
+        ImageButton togglePasswordVisibilityButton = findViewById(R.id.togglePasswordVisibilityButton);
+        ImageButton togglePasswordVisibilityButton2 = findViewById(R.id.togglePasswordVisibilityButton_2);
+
+        togglePasswordVisibilityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passwordEditText.getInputType() == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+                    passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    togglePasswordVisibilityButton.setImageResource(R.drawable.ic_visibility_off);
+                } else {
+                    passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    togglePasswordVisibilityButton.setImageResource(R.drawable.ic_visibility);
+                }
+                // Mueve el cursor al final del texto
+                passwordEditText.setSelection(passwordEditText.getText().length());
+            }
+        });
+
+        togglePasswordVisibilityButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passwordConfEditText.getInputType() == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+                    passwordConfEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    togglePasswordVisibilityButton2.setImageResource(R.drawable.ic_visibility_off);
+                } else {
+                    passwordConfEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    togglePasswordVisibilityButton2.setImageResource(R.drawable.ic_visibility);
+                }
+                // Mueve el cursor al final del texto
+                passwordConfEditText.setSelection(passwordConfEditText.getText().length());
+            }
+        });
+
     }
 
     private void registrarUsuario() {
