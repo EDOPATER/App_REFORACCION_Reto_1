@@ -12,7 +12,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
 import com.edopater.app_reforaccion_reto_1.modelos.Usuario;
 
 public class registrarseActivity extends AppCompatActivity {
@@ -40,15 +39,6 @@ public class registrarseActivity extends AppCompatActivity {
         contrasenaEditText = findViewById(R.id.contrasenaEditText);
         repetirContrasenaEditText = findViewById(R.id.confirmarContrasenaEditText);
         botonRegistrarse = findViewById(R.id.botonRegistrarse2);
-
-        botonRegistrarse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registrarUsuario();
-                Intent next = new Intent(registrarseActivity.this, InicioSesionActivity.class);
-                startActivity(next);
-            }
-        });
 
         EditText passwordEditText = findViewById(R.id.contrasenaEditText);
         EditText passwordConfEditText = findViewById(R.id.confirmarContrasenaEditText);
@@ -85,36 +75,58 @@ public class registrarseActivity extends AppCompatActivity {
             }
         });
 
+        botonRegistrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (registrarUsuario()) {
+                    // Crear el intent para la siguiente actividad
+                    Intent intent = new Intent(registrarseActivity.this, InicioSesionActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
     }
 
-    private void registrarUsuario() {
+    private boolean registrarUsuario() {
+
         String correo = correoEditText.getText().toString().trim();
         String nombre = nombreEditText.getText().toString().trim();
         String apellidos = apellidosEditText.getText().toString().trim();
         String contrasena = contrasenaEditText.getText().toString().trim();
         String repetirContrasena = repetirContrasenaEditText.getText().toString().trim();
+
+        // Obtener los valores de los checkboxes
         terminosAceptados = ((CheckBox) findViewById(R.id.checkBoxTerminos)).isChecked();
         datosAceptados = ((CheckBox) findViewById(R.id.checkBoxDatos)).isChecked();
 
         // Validar los campos
         if (nombre.isEmpty() || apellidos.isEmpty() || correo.isEmpty() || contrasena.isEmpty() || repetirContrasena.isEmpty()) {
             Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
-        }else{
+        } else {
             if (!contrasena.equals(repetirContrasena)) {
                 Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
                 if (!terminosAceptados || !datosAceptados) {
                     Toast.makeText(this, "Debes aceptar los términos y condiciones y tratamiento de datos", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     // Crear una instancia de la clase Usuario con los datos ingresados
                     Usuario usuario = new Usuario(nombre, apellidos, correo, contrasena);
 
-                    // Aquí puedes realizar la lógica adicional, como enviar los datos a un servidor o guardarlos localmente
+                    // Aquí se puede realizar la lógica adicional, como enviar los datos a un servidor o guardarlos localmente
 
                     // Mostrar un mensaje de éxito
                     Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                    return true;
                 }
             }
-        }
+
+       }
+        return false;
     }
 }
+
+
+
+
+

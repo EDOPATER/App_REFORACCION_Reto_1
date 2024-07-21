@@ -3,9 +3,11 @@ package com.edopater.app_reforaccion_reto_1;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import com.edopater.app_reforaccion_reto_1.modelos.Usuario;
@@ -30,6 +32,9 @@ public class InicioSesionActivity extends AppCompatActivity {
         //loginButton = findViewById(R.id.buttonInicio);
         registerButton = findViewById(R.id.buttonVolverReg);
 
+        EditText passwordEditText = findViewById(R.id.contrasenaEditText);
+        ImageButton togglePasswordVisibilityButton = findViewById(R.id.togglePasswordVisibilityButton);
+
         A_panelControl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
@@ -38,22 +43,37 @@ public class InicioSesionActivity extends AppCompatActivity {
             }
         });
 
-       // loginButton.setOnClickListener(new View.OnClickListener() {
-       //     @Override
-       //     public void onClick(View v) {
-       //         String email = emailEditText.getText().toString();
-       //         String password = passwordEditText.getText().toString();
+        togglePasswordVisibilityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passwordEditText.getInputType() == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+                    passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    togglePasswordVisibilityButton.setImageResource(R.drawable.ic_visibility_off);
+                } else {
+                    passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    togglePasswordVisibilityButton.setImageResource(R.drawable.ic_visibility);
+                }
+                // Mueve el cursor al final del texto
+                passwordEditText.setSelection(passwordEditText.getText().length());
+            }
+        });
+
+       /*loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = emailEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
 
                 // Validar las credenciales del usuario
-       //         if (validarCredenciales(email, password)) {
-                    // Credenciales válidas, realizar la acción de inicio de sesión
-       //           iniciarSesion();
-       //         } else {
-                    // Credenciales inválidas, mostrar mensaje de error
-       //            Toast.makeText(InicioSesionActivity.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
-       //         }
-       //     }
-       // });
+                if (validarCredenciales(email, password)) {
+                // Credenciales válidas, realizar la acción de inicio de sesión
+                  iniciarSesion();
+                } else {
+                // Credenciales inválidas, mostrar mensaje de error
+                   Toast.makeText(InicioSesionActivity.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });*/
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
