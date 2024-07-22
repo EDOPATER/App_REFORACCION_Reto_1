@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class panelControlActivity extends AppCompatActivity {
+public class PanelControlActivity extends AppCompatActivity {
 
     private Button A_Perfil;
     private Button A_Reg_Actividad;
@@ -28,7 +28,7 @@ public class panelControlActivity extends AppCompatActivity {
         A_Perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent next = new Intent(panelControlActivity.this, perfilUsuarioActivity.class);
+                Intent next = new Intent(PanelControlActivity.this, PerfilUsuarioActivity.class);
                 startActivity(next);
             }
         });
@@ -38,7 +38,7 @@ public class panelControlActivity extends AppCompatActivity {
         A_Reg_Actividad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent next = new Intent(panelControlActivity.this, registroActividadesPActivity.class);
+                Intent next = new Intent(PanelControlActivity.this, RegistroActividadesPActivity.class);
                 startActivity(next);
             }
         });
@@ -48,7 +48,7 @@ public class panelControlActivity extends AppCompatActivity {
         A_Reg_History.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent next = new Intent(panelControlActivity.this, historialActividadesActivity.class);
+                Intent next = new Intent(PanelControlActivity.this, HistorialActividadesActivity.class);
                 startActivity(next);
             }
         });
@@ -58,7 +58,7 @@ public class panelControlActivity extends AppCompatActivity {
         A_Reg_Estadisticas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent next = new Intent(panelControlActivity.this, estadisticasActivity.class);
+                Intent next = new Intent(PanelControlActivity.this, EstadisticasActivity.class);
                 startActivity(next);
             }
         });

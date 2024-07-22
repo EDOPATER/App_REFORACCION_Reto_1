@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".registrarseActivity"
+            android:name=".RegistrarseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".panelControlActivity"
+            android:name=".PanelControlActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +58,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".perfilUsuarioActivity"
+            android:name=".PerfilUsuarioActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,7 +67,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".registroActividadesPActivity"
+            android:name=".RegistroActividadesPActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -76,7 +76,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".historialActividadesActivity"
+            android:name=".HistorialActividadesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -85,7 +85,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".estadisticasActivity"
+            android:name=".EstadisticasActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -94,7 +94,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".informacionAmbActivity"
+            android:name=".InformacionAmbActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

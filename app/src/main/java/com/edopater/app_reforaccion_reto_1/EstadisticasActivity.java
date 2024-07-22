@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class estadisticasActivity extends AppCompatActivity {
+public class EstadisticasActivity extends AppCompatActivity {
 
     private Button A_Panel;
 
@@ -25,7 +25,7 @@ public class estadisticasActivity extends AppCompatActivity {
         A_Panel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent back = new Intent(estadisticasActivity.this, panelControlActivity.class);
+                Intent back = new Intent(EstadisticasActivity.this, PanelControlActivity.class);
                 startActivity(back);
             }
         });

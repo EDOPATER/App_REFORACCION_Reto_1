@@ -14,16 +14,17 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import com.edopater.app_reforaccion_reto_1.modelos.Usuario;
 
-public class registrarseActivity extends AppCompatActivity {
+public class RegistrarseActivity extends AppCompatActivity {
 
-    private EditText correoEditText;
+    private EditText emailEditText;
     private EditText nombreEditText;
     private EditText apellidosEditText;
-    private EditText contrasenaEditText;
+    private EditText passwordEditText;
     private EditText repetirContrasenaEditText;
     private boolean terminosAceptados;
     private boolean datosAceptados;
     private Button botonRegistrarse;
+    private NewUser newUser;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -33,17 +34,20 @@ public class registrarseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registrarse);
 
         // Inicializar vistas
-        correoEditText = findViewById(R.id.correoEditText);
+        emailEditText = findViewById(R.id.correoEditText);
         nombreEditText = findViewById(R.id.nombreEditText);
         apellidosEditText = findViewById(R.id.apellidosEditText);
-        contrasenaEditText = findViewById(R.id.contrasenaEditText);
+        passwordEditText = findViewById(R.id.contrasenaEditText);
         repetirContrasenaEditText = findViewById(R.id.confirmarContrasenaEditText);
         botonRegistrarse = findViewById(R.id.botonRegistrarse2);
 
+        EditText emailEditText = findViewById(R.id.correoEditText);
         EditText passwordEditText = findViewById(R.id.contrasenaEditText);
         EditText passwordConfEditText = findViewById(R.id.confirmarContrasenaEditText);
         ImageButton togglePasswordVisibilityButton = findViewById(R.id.togglePasswordVisibilityButton);
         ImageButton togglePasswordVisibilityButton2 = findViewById(R.id.togglePasswordVisibilityButton_2);
+
+        newUser = new NewUser(emailEditText, passwordEditText);
 
         togglePasswordVisibilityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +84,15 @@ public class registrarseActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (registrarUsuario()) {
                     // Crear el intent para la siguiente actividad
-                    Intent intent = new Intent(registrarseActivity.this, InicioSesionActivity.class);
+                    Intent intent = new Intent(RegistrarseActivity.this, InicioSesionActivity.class);
+
+                    String email = newUser.emailEditText.getText().toString();
+                    String password = newUser.passwordEditText.getText().toString();
+
+                    // Pasar los valores como extras
+                    intent.putExtra("email", email);
+                    intent.putExtra("password", password);
+
                     startActivity(intent);
                 }
             }
@@ -90,10 +102,10 @@ public class registrarseActivity extends AppCompatActivity {
 
     private boolean registrarUsuario() {
 
-        String correo = correoEditText.getText().toString().trim();
+        String correo = emailEditText.getText().toString().trim();
         String nombre = nombreEditText.getText().toString().trim();
         String apellidos = apellidosEditText.getText().toString().trim();
-        String contrasena = contrasenaEditText.getText().toString().trim();
+        String contrasena = passwordEditText.getText().toString().trim();
         String repetirContrasena = repetirContrasenaEditText.getText().toString().trim();
 
         // Obtener los valores de los checkboxes
@@ -123,6 +135,17 @@ public class registrarseActivity extends AppCompatActivity {
 
        }
         return false;
+    }
+
+    // Clase para encapsular los campos de texto
+    class NewUser {
+        EditText emailEditText;
+        EditText passwordEditText;
+
+        NewUser(EditText emailEditText, EditText passwordEditText) {
+            this.emailEditText = emailEditText;
+            this.passwordEditText = passwordEditText;
+        }
     }
 }
 

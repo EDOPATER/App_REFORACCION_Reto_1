@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class perfilUsuarioActivity extends AppCompatActivity {
+public class RegistroActividadesPActivity extends AppCompatActivity {
 
     private Button A_Panel;
 
@@ -18,14 +18,14 @@ public class perfilUsuarioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_perfil_usuario);
+        setContentView(R.layout.activity_registro_actividades_plantacion);
 
         A_Panel = findViewById(R.id.buttonVolverPanel);
 
         A_Panel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent back = new Intent(perfilUsuarioActivity.this, panelControlActivity.class);
+                Intent back = new Intent(RegistroActividadesPActivity.this, PanelControlActivity.class);
                 startActivity(back);
             }
         });

@@ -1,13 +1,16 @@
 package com.edopater.app_reforaccion_reto_1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import com.edopater.app_reforaccion_reto_1.modelos.Usuario;
@@ -17,8 +20,12 @@ public class InicioSesionActivity extends AppCompatActivity {
     private Button A_panelControl;
     private EditText emailEditText;
     private EditText passwordEditText;
-    //private Button loginButton;
     private Button registerButton;
+
+    private String expectedEmail;
+    private String expectedPassword;
+
+    @SuppressLint("WrongViewCast")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,22 +33,27 @@ public class InicioSesionActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_inicio_sesion);
 
-        A_panelControl = findViewById(R.id.buttonInicio);
+        // Inicializar los EditText
         emailEditText = findViewById(R.id.correoEditText);
         passwordEditText = findViewById(R.id.contrasenaEditText);
-        //loginButton = findViewById(R.id.buttonInicio);
+
+        // Obtener los valores pasados por Intent
+        Intent intent = getIntent();
+        expectedEmail = intent.getStringExtra("email");
+        expectedPassword = intent.getStringExtra("password");
+
+        // Usar los valores (por ejemplo, mostrar en TextViews para verificación)
+        TextView emailTextView = findViewById(R.id.correoEditText);
+        TextView passwordTextView = findViewById(R.id.contrasenaEditText);
+        emailTextView.setText(expectedEmail);
+        passwordTextView.setText(expectedPassword);
+
+        // Inicializar vistas
+        A_panelControl = findViewById(R.id.buttonInicio);
         registerButton = findViewById(R.id.buttonVolverReg);
 
         EditText passwordEditText = findViewById(R.id.contrasenaEditText);
         ImageButton togglePasswordVisibilityButton = findViewById(R.id.togglePasswordVisibilityButton);
-
-        A_panelControl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v){
-                Intent next = new Intent(InicioSesionActivity.this, panelControlActivity.class);
-                startActivity(next);
-            }
-        });
 
         togglePasswordVisibilityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +70,16 @@ public class InicioSesionActivity extends AppCompatActivity {
             }
         });
 
-       /*loginButton.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            // Realizar la acción de registro
+                registrar();
+            }
+        });
+
+
+        A_panelControl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = emailEditText.getText().toString();
@@ -73,39 +94,25 @@ public class InicioSesionActivity extends AppCompatActivity {
                    Toast.makeText(InicioSesionActivity.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
                 }
             }
-        });*/
-
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Realizar la acción de registro
-                registrar();
-            }
         });
+
     }
+
         private boolean validarCredenciales(String email, String password) {
-            // Aquí se implementa la lógica de validación de las credenciales.
-            // Se puede realizar consultas a la base de datos, verificar con un API, etc.
-            // Por simplicidad, aquí se valida un usuario fijo.
-
-            // Usuario de ejemplo
-
-            Usuario usuarioEjemplo = new Usuario("nombre", "apellidos", "correo", "contrasena");
-
-            return email.equals(usuarioEjemplo.getCorreo()) && password.equals(usuarioEjemplo.getContrasena());
+            // Comparar los valores ingresados con los valores esperados
+            return email.equals(expectedEmail) && password.equals(expectedPassword);
         }
 
         private void iniciarSesion() {
-            // Aquí se implementa la lógica para iniciar sesión.
-            // Por ejemplo, se puede abrir una nueva actividad o realizar alguna acción después del inicio de sesión exitoso.
-            Intent next = new Intent(InicioSesionActivity.this, panelControlActivity.class);
-            startActivity(next);
-            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+            // Implementa la acción a Panel de Control
+            Intent intent = new Intent(InicioSesionActivity.this, PanelControlActivity.class);
+            startActivity(intent);
+            finish(); // Finaliza la actividad actual para que el usuario no pueda volver con el botón Atrás
         }
 
         private void registrar() {
             // Aquí puedes implementar la lógica para registrar un nuevo usuario.
-            Intent Registrar = new Intent(InicioSesionActivity.this, registrarseActivity.class );
+            Intent Registrar = new Intent(InicioSesionActivity.this, RegistrarseActivity.class );
             startActivity(Registrar);
             // Por ejemplo, puedes abrir una actividad de registro o mostrar un formulario de registro.
             Toast.makeText(this, "Registro de usuario", Toast.LENGTH_SHORT).show();

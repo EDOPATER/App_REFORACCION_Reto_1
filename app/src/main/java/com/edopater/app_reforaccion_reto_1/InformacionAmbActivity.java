@@ -1,4 +1,4 @@
 package com.edopater.app_reforaccion_reto_1;
 
-public class informacionAmbActivity {
+public class InformacionAmbActivity {
 }
