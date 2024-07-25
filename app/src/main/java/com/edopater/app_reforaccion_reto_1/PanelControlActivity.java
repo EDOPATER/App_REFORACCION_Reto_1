@@ -15,6 +15,9 @@ public class PanelControlActivity extends AppCompatActivity {
     private Button A_Reg_Actividad;
     private Button A_Reg_History;
     private Button A_Reg_Estadisticas;
+    private Button A_Info_Ambiental;
+    private Button A_Concejos;
+    private Button A_Redes_Sociales;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -59,6 +62,36 @@ public class PanelControlActivity extends AppCompatActivity {
             @Override
             public void onClick (View v){
                 Intent next = new Intent(PanelControlActivity.this, EstadisticasActivity.class);
+                startActivity(next);
+            }
+        });
+
+        A_Info_Ambiental = findViewById(R.id.buttonInformacion);
+
+        A_Info_Ambiental.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(PanelControlActivity.this, InformacionAmbActivity.class);
+                startActivity(next);
+            }
+        });
+
+        A_Concejos = findViewById(R.id.buttonConcejos);
+
+        A_Concejos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(PanelControlActivity.this, ConcejosActivity.class);
+                startActivity(next);
+            }
+        });
+
+        A_Redes_Sociales = findViewById(R.id.buttonRedes);
+
+        A_Redes_Sociales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(PanelControlActivity.this, RedesSocialesActivity.class);
                 startActivity(next);
             }
         });

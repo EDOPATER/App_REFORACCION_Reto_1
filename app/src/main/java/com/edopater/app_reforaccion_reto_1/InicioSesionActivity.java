@@ -20,10 +20,13 @@ public class InicioSesionActivity extends AppCompatActivity {
     private Button A_panelControl;
     private EditText emailEditText;
     private EditText passwordEditText;
+    private EditText nombreEditText;
+    private EditText apellidosEditText;
     private Button registerButton;
-
     private String expectedEmail;
     private String expectedPassword;
+    private String expectedNombre;
+    private String expectedApellidos;
 
     @SuppressLint("WrongViewCast")
 
@@ -36,11 +39,15 @@ public class InicioSesionActivity extends AppCompatActivity {
         // Inicializar los EditText
         emailEditText = findViewById(R.id.correoEditText);
         passwordEditText = findViewById(R.id.contrasenaEditText);
+        EditText emailEditText = findViewById(R.id.correoEditText);
+        EditText passwordEditText = findViewById(R.id.contrasenaEditText);
 
         // Obtener los valores pasados por Intent
         Intent intent = getIntent();
         expectedEmail = intent.getStringExtra("email");
         expectedPassword = intent.getStringExtra("password");
+        expectedNombre = intent.getStringExtra("nombre");
+        expectedApellidos = intent.getStringExtra("apellidos");
 
         // Usar los valores (por ejemplo, mostrar en TextViews para verificación)
         TextView emailTextView = findViewById(R.id.correoEditText);
@@ -48,11 +55,11 @@ public class InicioSesionActivity extends AppCompatActivity {
         emailTextView.setText(expectedEmail);
         passwordTextView.setText(expectedPassword);
 
+
         // Inicializar vistas
         A_panelControl = findViewById(R.id.buttonInicio);
         registerButton = findViewById(R.id.buttonVolverReg);
 
-        EditText passwordEditText = findViewById(R.id.contrasenaEditText);
         ImageButton togglePasswordVisibilityButton = findViewById(R.id.togglePasswordVisibilityButton);
 
         togglePasswordVisibilityButton.setOnClickListener(new View.OnClickListener() {

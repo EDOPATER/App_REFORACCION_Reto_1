@@ -121,7 +121,7 @@
                 android:onClick="onCellClick" />
 
             <Button
-                android:id="@+id/button02"
+                android:id="@+id/buttonRedes"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
@@ -186,7 +186,7 @@
                 android:onClick="onCellClick" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/buttonConcejos"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"

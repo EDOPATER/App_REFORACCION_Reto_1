@@ -1,6 +1,11 @@
 package com.edopater.app_reforaccion_reto_1;
 
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -79,29 +84,53 @@ public class RegistrarseActivity extends AppCompatActivity {
             }
         });
 
+
         botonRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (registrarUsuario()) {
-                    // Crear el intent para la siguiente actividad
-                    Intent intent = new Intent(RegistrarseActivity.this, InicioSesionActivity.class);
+                    // Crear el intent para InicioSesionActivity
+                    Intent intentInicioSesion = new Intent(RegistrarseActivity.this, InicioSesionActivity.class);
 
                     String email = newUser.emailEditText.getText().toString();
                     String password = newUser.passwordEditText.getText().toString();
+                    String nombre = nombreEditText.getText().toString();
+                    String apellidos = apellidosEditText.getText().toString();
 
                     // Pasar los valores como extras
-                    intent.putExtra("email", email);
-                    intent.putExtra("password", password);
+                    intentInicioSesion.putExtra("email", email);
+                    intentInicioSesion.putExtra("password", password);
+                    intentInicioSesion.putExtra("nombre", nombre);
+                    intentInicioSesion.putExtra("apellidos", apellidos);
 
-                    startActivity(intent);
+                    startActivityForResult(intentInicioSesion, 1);
                 }
             }
         });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+
+            // Datos recibidos de InicioSesionActivity, iniciar PerfilUsuarioActivity
+
+            String email = data.getStringExtra("email");
+            String password = data.getStringExtra("password");
+            String nombre = data.getStringExtra("nombre");
+            String apellidos = data.getStringExtra("apellidos");
+
+            Intent intentPerfilUsuario = new Intent(RegistrarseActivity.this, PerfilUsuarioActivity.class);
+            intentPerfilUsuario.putExtra("email", email);
+            intentPerfilUsuario.putExtra("password", password);
+            intentPerfilUsuario.putExtra("nombre", nombre);
+            intentPerfilUsuario.putExtra("apellidos", apellidos);
+            startActivity(intentPerfilUsuario);
+        }
     }
 
     private boolean registrarUsuario() {
-
         String correo = emailEditText.getText().toString().trim();
         String nombre = nombreEditText.getText().toString().trim();
         String apellidos = apellidosEditText.getText().toString().trim();
@@ -132,8 +161,7 @@ public class RegistrarseActivity extends AppCompatActivity {
                     return true;
                 }
             }
-
-       }
+        }
         return false;
     }
 

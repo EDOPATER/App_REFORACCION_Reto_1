@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InformacionAmbActivity">
+    tools:context=".ConcejosActivity">
 
     <ImageView
         android:id="@+id/imagen1"
@@ -45,9 +45,9 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Información Ambiental"
+                android:text="Concejos y Recomendaciones"
                 android:textAlignment="center"
-                android:textSize="35sp" />
+                android:textSize="29sp" />
 
         </LinearLayout>
 
@@ -55,15 +55,15 @@
             android:id="@+id/gridLayoutBoard"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:layout_weight="1"
             android:columnCount="3"
-            android:rowCount="3"
             android:padding="0dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp">
+            android:rowCount="3">
 
             <Button
-                android:id="@+id/buttonCarbono"
+                android:id="@+id/buttonPlanificacion"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_row="0"
@@ -71,117 +71,115 @@
                 android:layout_column="0"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:backgroundTint="#06EDF4"
-                android:text="Captura de carbono y mitigación del cambio climático"
-                android:textSize="14sp"
+                android:backgroundTint="#05F6AD"
+                android:text="Planificación y preparación"
                 android:textColor="@color/black"
+                android:textSize="14sp"
                 tools:visibility="visible" />
 
             <Button
-                android:id="@+id/buttonAgua"
+                android:id="@+id/buttonRiego"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_row="0"
                 android:layout_rowWeight="1"
-                android:layout_column="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:backgroundTint="#06EDF4"
+                android:backgroundTint="#05F6AD"
                 android:onClick="onCellClick"
-                android:text="Regulación del ciclo del agua"
+                android:text="Riego y nutrición"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/buttonNormas"
+                android:id="@+id/buttonPodas"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:text="Cumplimiento normativo y certificaciones"
-                android:backgroundTint="#06EDF4"
-                android:textSize="14sp"
+                android:backgroundTint="#05F6AD"
+                android:onClick="onCellClick"
+                android:text="Podas y mantenimiento"
                 android:textColor="@color/black"
-                android:onClick="onCellClick" />
+                android:textSize="14sp" />
 
             <Button
-                android:id="@+id/buttonCalidad"
+                android:id="@+id/buttonManPlantas"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:backgroundTint="#06EDF4"
-                android:text="Mejora de la calidad del suelo"
-                android:textSize="14sp"
+                android:backgroundTint="#05F6AD"
+                android:onClick="onCellClick"
+                android:text="Selección y manejo de plantas"
                 android:textColor="@color/black"
-                android:onClick="onCellClick" />
+                android:textSize="14sp" />
 
             <Button
-                android:id="@+id/buttonBeneficios"
+                android:id="@+id/buttonMalezas"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:backgroundTint="#06EDF4"
-                android:text="Beneficios económicos y sociales"
-                android:textSize="14sp"
+                android:backgroundTint="#05F6AD"
+                android:onClick="onCellClick"
+                android:text="Control de malezas y competencia"
                 android:textColor="@color/black"
-                android:onClick="onCellClick"/>
+                android:textSize="14sp" />
 
             <Button
-                android:id="@+id/buttonCompensacion"
+                android:id="@+id/buttonSeguimiento"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:backgroundTint="#06EDF4"
+                android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:text="Compensación ambiental y responsabilidad social"
-                android:textSize="14sp"
+                android:backgroundTint="#05F6AD"
+                android:onClick="onCellClick"
+                android:text="Registro y seguimiento"
                 android:textColor="@color/black"
-                android:onClick="onCellClick" />
+                android:textSize="14sp" />
 
             <Button
-                android:id="@+id/buttonBiodiversidad"
+                android:id="@+id/buttonPlantacion"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:backgroundTint="#06EDF4"
-                android:text="Conservación de la biodiversidad"
-                android:textSize="14sp"
+                android:backgroundTint="#05F6AD"
+                android:onClick="onCellClick"
+                android:text="Plantación"
                 android:textColor="@color/black"
-                android:onClick="onCellClick" />
+                android:textSize="14sp" />
 
             <Button
-                android:id="@+id/buttonImpactoClima"
+                android:id="@+id/buttonPlagas"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="4dp"
+                android:backgroundTint="#05F6AD"
+                android:onClick="onCellClick"
+                android:text="Protección contra plagas y enfermedades"
                 android:textColor="@color/black"
-                android:text="Resiliencia frente a los impactos del cambio climático"
-                android:backgroundTint="#06EDF4"
-                android:textSize="14sp"
-                android:onClick="onCellClick" />
+                android:textSize="14sp" />
 
             <Button
-                android:id="@+id/buttonHuellaCarbono"
+                android:id="@+id/buttonCapacitacion"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:backgroundTint="#06EDF4"
+                android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:text="Huella de Carbono y Eficiencia Energética"
-                android:textSize="14sp"
+                android:backgroundTint="#05F6AD"
+                android:onClick="onCellClick"
+                android:text="Capacitación y consultoría"
                 android:textColor="@color/black"
-                android:onClick="onCellClick" />
+                android:textSize="14sp" />
 
         </GridLayout>
 
