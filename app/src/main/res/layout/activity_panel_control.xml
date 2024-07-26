@@ -160,7 +160,7 @@
                 android:onClick="onCellClick"/>
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/buttonNotificaciones"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"

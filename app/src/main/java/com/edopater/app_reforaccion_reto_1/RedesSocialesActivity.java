@@ -1,6 +1,5 @@
 package com.edopater.app_reforaccion_reto_1;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

@@ -18,6 +18,7 @@ public class PanelControlActivity extends AppCompatActivity {
     private Button A_Info_Ambiental;
     private Button A_Concejos;
     private Button A_Redes_Sociales;
+    private Button A_Notificaciones;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -92,6 +93,16 @@ public class PanelControlActivity extends AppCompatActivity {
             @Override
             public void onClick (View v){
                 Intent next = new Intent(PanelControlActivity.this, RedesSocialesActivity.class);
+                startActivity(next);
+            }
+        });
+
+        A_Notificaciones = findViewById(R.id.buttonNotificaciones);
+
+        A_Notificaciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(PanelControlActivity.this, NotificacionesActivity.class);
                 startActivity(next);
             }
         });
