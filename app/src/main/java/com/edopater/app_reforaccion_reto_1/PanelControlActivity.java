@@ -19,6 +19,7 @@ public class PanelControlActivity extends AppCompatActivity {
     private Button A_Concejos;
     private Button A_Redes_Sociales;
     private Button A_Notificaciones;
+    private Button A_Exportar;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -107,5 +108,14 @@ public class PanelControlActivity extends AppCompatActivity {
             }
         });
 
+        A_Exportar = findViewById(R.id.buttonExportar);
+
+        A_Exportar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent next = new Intent(PanelControlActivity.this, ExportarDatosActivity.class);
+                startActivity(next);
+            }
+        });
     }
 }
