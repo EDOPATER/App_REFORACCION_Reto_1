@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +18,15 @@ public class SplashActivity extends AppCompatActivity {
 
         //Enlazar la variable real con la Lógica
         ImageView imagen1 = findViewById(R.id.imagen1);
+        ImageView imagen2 = findViewById(R.id.imagen2);
 
         //Agregar la animación de salida o solidificación
         Animation fadeIn = new AlphaAnimation(0,1);
-        fadeIn.setDuration(3000);
+        fadeIn.setDuration(5000);
         imagen1.startAnimation(fadeIn);
+
+        Animation Anim_rot = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotation);
+        imagen2.startAnimation(Anim_rot);
 
         imagen1.postDelayed(new Runnable() {
             @Override
@@ -30,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(irAHome);
                 finish();
             }
-        },  3000);
+        },  5000);
     }
     @Override
     protected void onDestroy(){

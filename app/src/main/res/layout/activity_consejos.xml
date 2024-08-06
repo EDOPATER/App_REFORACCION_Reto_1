@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConcejosActivity">
+    tools:context=".ConsejosActivity">
 
     <ImageView
         android:id="@+id/imagen1"
@@ -45,7 +45,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Concejos y Recomendaciones"
+                android:text="Consejos y Recomendaciones"
                 android:textAlignment="center"
                 android:textSize="29sp" />
 

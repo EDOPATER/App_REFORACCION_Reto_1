@@ -29,6 +29,7 @@ public class NotificacionesActivity extends AppCompatActivity {
     private RadioButton radioButtonPersonal;
     private Button buttonSave;
     private Button buttonSearch;
+    private Button A_Panel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,17 @@ public class NotificacionesActivity extends AppCompatActivity {
                 CleanEditText();
             }
         });
+
+        A_Panel = findViewById(R.id.buttonVolverPanel);
+
+        A_Panel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent back = new Intent(NotificacionesActivity.this, PanelControlActivity.class);
+                startActivity(back);
+            }
+        });
+
     }
 
     protected void CleanEditText(){

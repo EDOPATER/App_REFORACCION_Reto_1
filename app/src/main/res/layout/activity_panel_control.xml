@@ -186,13 +186,13 @@
                 android:onClick="onCellClick" />
 
             <Button
-                android:id="@+id/buttonConcejos"
+                android:id="@+id/buttonConsejos"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_margin="4dp"
-                android:text="Concejos y Recomendaciones"
+                android:text="Consejos y Recomendaciones"
                 android:backgroundTint="@color/design_default_color_secondary"
                 android:textSize="10sp"
                 android:textColor="@color/black"

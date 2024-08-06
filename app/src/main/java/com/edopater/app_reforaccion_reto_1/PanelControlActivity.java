@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,7 +15,7 @@ public class PanelControlActivity extends AppCompatActivity {
     private Button A_Reg_History;
     private Button A_Reg_Estadisticas;
     private Button A_Info_Ambiental;
-    private Button A_Concejos;
+    private Button A_Consejos;
     private Button A_Redes_Sociales;
     private Button A_Notificaciones;
     private Button A_Exportar;
@@ -78,12 +77,12 @@ public class PanelControlActivity extends AppCompatActivity {
             }
         });
 
-        A_Concejos = findViewById(R.id.buttonConcejos);
+        A_Consejos = findViewById(R.id.buttonConsejos);
 
-        A_Concejos.setOnClickListener(new View.OnClickListener() {
+        A_Consejos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent next = new Intent(PanelControlActivity.this, ConcejosActivity.class);
+                Intent next = new Intent(PanelControlActivity.this, ConsejosActivity.class);
                 startActivity(next);
             }
         });

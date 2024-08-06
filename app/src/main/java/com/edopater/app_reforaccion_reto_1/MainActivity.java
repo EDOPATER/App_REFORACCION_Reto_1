@@ -12,10 +12,10 @@ import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Actividad o vista de bienvenida
     private VideoView videoRefor;
     private Button Registro;
     private Button Inicio;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Iniciar la reproducción del video
         videoRefor.start();
-
-
-
-
 
   }
 }
