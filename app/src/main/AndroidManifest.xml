@@ -178,7 +178,10 @@
             android:name=".Consejo_2_Activity"
             android:exported="false"
             android:theme="@style/Theme.App_REFORACCION_Reto_1" />
-
+        <activity
+            android:name=".Consejo_3_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
 
     </application>
 
