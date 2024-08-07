@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 import android.net.Uri;
 
-public class Consejo_4_Activity extends AppCompatActivity {
+public class Consejo_5_Activity extends AppCompatActivity {
 
     private VideoView videoRefor;
     private Button A_Consejos;
@@ -22,7 +22,7 @@ public class Consejo_4_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consejo4);
+        setContentView(R.layout.activity_consejo5);
         VideoView videoRefor = findViewById(R.id.videoRefor);
 
         if (videoRefor != null) {
@@ -34,19 +34,19 @@ public class Consejo_4_Activity extends AppCompatActivity {
         }
 
         // Enlaza el TextView
-        TextView consejoTextView = findViewById(R.id.Consejo4);
+        TextView consejoTextView = findViewById(R.id.Consejo5);
 
         // Asigna un texto al TextView
-        consejoTextView.setText("o\tRiego adecuado: Proporciona agua suficiente, especialmente durante los primeros años después de la plantación.\n\n" +
-                "o\tFertilización: Aplica fertilizantes según las necesidades del suelo y las recomendaciones específicas para cada especie.\n\n");
+        consejoTextView.setText("o\tManejo de malezas: Controla las malezas que compiten con los árboles por agua, nutrientes y luz.\n\n" +
+                "o\tDespeje de competencia: Elimina o poda otras plantas que puedan competir con los árboles por recursos.\n\n");
 
-        String text = "o\tRiego adecuado: Proporciona agua suficiente, especialmente durante los primeros años después de la plantación.\n\n" +
-                "o\tFertilización: Aplica fertilizantes según las necesidades del suelo y las recomendaciones específicas para cada especie.\n\n";
+        String text = "o\tManejo de malezas: Controla las malezas que compiten con los árboles por agua, nutrientes y luz.\n\n" +
+                "o\tDespeje de competencia: Elimina o poda otras plantas que puedan competir con los árboles por recursos.\n\n";
 
         SpannableString spannableString = new SpannableString(text);
 
-        String boldText1 = "Riego adecuado:";
-        String boldText2 = "Fertilización:";
+        String boldText1 = "Manejo de malezas:";
+        String boldText2 = "Despeje de competencia:";
 
         int start1 = text.indexOf(boldText1);
         int end1 = start1 + boldText1.length();
@@ -63,7 +63,7 @@ public class Consejo_4_Activity extends AppCompatActivity {
         A_Consejos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent back = new Intent(Consejo_4_Activity.this, ConsejosActivity.class);
+                Intent back = new Intent(Consejo_5_Activity.this, ConsejosActivity.class);
                 startActivity(back);
             }
         });

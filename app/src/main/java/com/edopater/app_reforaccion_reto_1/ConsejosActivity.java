@@ -66,7 +66,7 @@ public class ConsejosActivity extends AppCompatActivity {
             }
         });
 
-        /*A_Control_Malezas = findViewById(R.id.buttonMalezas);
+        A_Control_Malezas = findViewById(R.id.buttonMalezas);
 
         A_Control_Malezas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +76,7 @@ public class ConsejosActivity extends AppCompatActivity {
             }
         });
 
-        A_Plagas = findViewById(R.id.buttonPlagas);
+        /*A_Plagas = findViewById(R.id.buttonPlagas);
 
         A_Plagas.setOnClickListener(new View.OnClickListener() {
             @Override
