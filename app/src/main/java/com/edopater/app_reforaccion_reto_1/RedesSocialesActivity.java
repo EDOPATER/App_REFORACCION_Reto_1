@@ -60,8 +60,8 @@ public class RedesSocialesActivity extends AppCompatActivity {
     private void loadPosts() {
         progressBar.setVisibility(View.VISIBLE);
         // Simular la carga de posts (reemplazar con carga real de datos)
-        postList.add(new Post("John Doe", "Hace 2 horas", "¡Acabo de plantar un nuevo árbol!"));
-        postList.add(new Post("Jane Smith", "Hace 3 horas", "Participé en un evento de plantación de árboles."));
+        postList.add(new Post("Johny Daes", "Hace 2 horas", "¡Acabo de plantar un nuevo árbol!"));
+        postList.add(new Post("Jenny Lombardo", "Hace 3 horas", "Participé en un evento de plantación de árboles."));
         postList.add(new Post("Lana Stanford", "Hace 5 horas", "Realicé compra de insumos para la plantación."));
         postList.add(new Post("Stanly Idkins", "Hace 6 horas", "Compartí el avance de la plantación."));
         postAdapter.notifyDataSetChanged();

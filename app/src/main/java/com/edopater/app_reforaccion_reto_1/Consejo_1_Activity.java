@@ -66,6 +66,7 @@ public class Consejo_1_Activity extends AppCompatActivity {
 
         consejoTextView.setText(spannableString);
         consejoTextView.setText(spannableString);
+
         A_Consejos = findViewById(R.id.buttonVolverConsejos);
 
         A_Consejos.setOnClickListener(new View.OnClickListener() {

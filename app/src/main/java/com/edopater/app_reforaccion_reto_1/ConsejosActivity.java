@@ -19,6 +19,7 @@ public class ConsejosActivity extends AppCompatActivity {
     private Button A_Podas;
     private Button A_Seguimiento;
     private Button A_Capacitacion;
+    private Button A_Panel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +114,16 @@ public class ConsejosActivity extends AppCompatActivity {
             public void onClick (View v){
                 Intent next = new Intent(ConsejosActivity.this, Consejo_9_Activity.class);
                 startActivity(next);
+            }
+        });
+
+        A_Panel = findViewById(R.id.buttonVolverPanel);
+
+        A_Panel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent back = new Intent(ConsejosActivity.this, PanelControlActivity.class);
+                startActivity(back);
             }
         });
 
