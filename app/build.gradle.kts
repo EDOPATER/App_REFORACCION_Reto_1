@@ -47,4 +47,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation("com.google.code.gson:gson:2.11.0");
+
 }
