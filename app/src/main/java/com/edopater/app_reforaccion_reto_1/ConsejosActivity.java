@@ -56,7 +56,7 @@ public class ConsejosActivity extends AppCompatActivity {
             }
         });
 
-        /*A_Riego = findViewById(R.id.buttonRiego);
+        A_Riego = findViewById(R.id.buttonRiego);
 
         A_Riego.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +66,7 @@ public class ConsejosActivity extends AppCompatActivity {
             }
         });
 
-        A_Control_Malezas = findViewById(R.id.buttonMalezas);
+        /*A_Control_Malezas = findViewById(R.id.buttonMalezas);
 
         A_Control_Malezas.setOnClickListener(new View.OnClickListener() {
             @Override
