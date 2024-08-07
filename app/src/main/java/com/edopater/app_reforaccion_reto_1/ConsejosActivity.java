@@ -96,7 +96,7 @@ public class ConsejosActivity extends AppCompatActivity {
             }
         });
 
-        /*A_Seguimiento = findViewById(R.id.buttonSeguimiento);
+        A_Seguimiento = findViewById(R.id.buttonSeguimiento);
 
         A_Seguimiento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,9 +114,7 @@ public class ConsejosActivity extends AppCompatActivity {
                 Intent next = new Intent(ConsejosActivity.this, Consejo_9_Activity.class);
                 startActivity(next);
             }
-        });*/
-
-
+        });
 
     }
 }
