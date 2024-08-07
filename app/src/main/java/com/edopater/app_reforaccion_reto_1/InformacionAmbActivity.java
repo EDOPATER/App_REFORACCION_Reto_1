@@ -48,7 +48,7 @@ public class InformacionAmbActivity extends AppCompatActivity {
             }
         });
 
-        /*A_Calidad = findViewById(R.id.buttonCalidad);
+        A_Calidad = findViewById(R.id.buttonCalidad);
 
         A_Calidad.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +58,7 @@ public class InformacionAmbActivity extends AppCompatActivity {
             }
         });
 
-        A_Biodiversidad = findViewById(R.id.buttonBiodiversidad);
+        /*A_Biodiversidad = findViewById(R.id.buttonBiodiversidad);
 
         A_Biodiversidad.setOnClickListener(new View.OnClickListener() {
             @Override
