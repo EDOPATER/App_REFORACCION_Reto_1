@@ -38,7 +38,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:orientation="vertical">
 
             <TextView
@@ -47,27 +47,37 @@
                 android:layout_height="match_parent"
                 android:text="Panel de Control"
                 android:textAlignment="center"
-                android:textSize="40sp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="135dp"
+            android:layout_height="200dp"
             android:layout_marginTop="0dp"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imagenDashboard"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                app:srcCompat="@drawable/estadistica_3" />
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/grafico_pie_1"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toStartOf="@id/grafico_pie_2" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/grafico_pie_2"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_marginTop="15dp"
             android:orientation="vertical">
 
@@ -77,7 +87,7 @@
                 android:layout_height="match_parent"
                 android:text="Menú de Opciones"
                 android:textAlignment="center"
-                android:textSize="40sp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -89,8 +99,8 @@
             android:columnCount="3"
             android:rowCount="3"
             android:padding="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
 
             <Button
                 android:id="@+id/buttonPerfil"
@@ -215,20 +225,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="5dp"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/buttonCerrar"
                 android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:backgroundTint="#2E7D32"
                 android:text="Cerrar Aplicación"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 

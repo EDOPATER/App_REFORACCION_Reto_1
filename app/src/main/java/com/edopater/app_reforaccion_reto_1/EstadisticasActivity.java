@@ -64,7 +64,7 @@ public class EstadisticasActivity extends AppCompatActivity {
         ArrayList<PieEntry> entries = new ArrayList<>();
         entries.add(new PieEntry(40f, "Plantaciones"));
         entries.add(new PieEntry(30f, "Árboles plantados"));
-        entries.add(new PieEntry(20f, "Supervivencia"));
+        entries.add(new PieEntry(20f, "Especies"));
         entries.add(new PieEntry(10f, "Otros"));
 
         PieDataSet dataSet = new PieDataSet(entries, "Estadísticas de Reforestación");
