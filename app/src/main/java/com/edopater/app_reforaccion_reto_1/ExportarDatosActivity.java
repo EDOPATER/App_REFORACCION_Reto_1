@@ -3,7 +3,6 @@ package com.edopater.app_reforaccion_reto_1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ExportarDatosActivity extends AppCompatActivity {
@@ -13,7 +12,7 @@ public class ExportarDatosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_exportar_datos);
 
         A_Panel = findViewById(R.id.buttonVolverPanel);

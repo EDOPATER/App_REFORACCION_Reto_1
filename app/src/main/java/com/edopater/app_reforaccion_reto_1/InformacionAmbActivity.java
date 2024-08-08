@@ -58,7 +58,7 @@ public class InformacionAmbActivity extends AppCompatActivity {
             }
         });
 
-        /*A_Biodiversidad = findViewById(R.id.buttonBiodiversidad);
+        A_Biodiversidad = findViewById(R.id.buttonBiodiversidad);
 
         A_Biodiversidad.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +126,7 @@ public class InformacionAmbActivity extends AppCompatActivity {
                 Intent next = new Intent(InformacionAmbActivity.this, Informacion_9_Activity.class);
                 startActivity(next);
             }
-        });*/
+        });
 
     }
 }

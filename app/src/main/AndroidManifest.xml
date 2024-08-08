@@ -214,8 +214,34 @@
             android:name=".Informacion_2_Activity"
             android:exported="false"
             android:theme="@style/Theme.App_REFORACCION_Reto_1" />
-
-
+        <activity
+            android:name=".Informacion_3_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
+        <activity
+            android:name=".Informacion_4_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
+        <activity
+            android:name=".Informacion_5_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
+        <activity
+            android:name=".Informacion_6_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
+        <activity
+            android:name=".Informacion_7_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
+        <activity
+            android:name=".Informacion_8_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
+        <activity
+            android:name=".Informacion_9_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.App_REFORACCION_Reto_1" />
 
 
     </application>

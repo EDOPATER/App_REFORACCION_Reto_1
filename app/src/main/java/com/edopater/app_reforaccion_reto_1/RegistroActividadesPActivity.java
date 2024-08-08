@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistroActividadesPActivity extends AppCompatActivity {
@@ -17,7 +16,7 @@ public class RegistroActividadesPActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_registro_actividades_plantacion);
 
         A_Panel = findViewById(R.id.buttonVolverPanel);
