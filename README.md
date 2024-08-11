@@ -47,6 +47,9 @@ Este proyecto pretende fomentar comportamientos más sostenibles y conscientes d
 | ![13-1 Notificaciones - Buscar](https://github.com/user-attachments/assets/3d842223-acf0-4b0b-ad98-551f660ebab5)      |Animación inicial de la aplicación con el logo de la aplicación.     |
 | "Exportar Datos"      |      |
 | ![14 Exportar Datos](https://github.com/user-attachments/assets/a6b0254f-9474-43bb-ad6c-504eda46dcd6)      | Funcionalidad para exportar datos de la plantación en formatos como CSV o PDF para análisis personal o generación de informes para la toma de decisiones.     |
-
-
-
+## CRONOGRAMA TRELLO DE LA APLICACIÓN
+![Trello Final de la Aplicación](https://github.com/user-attachments/assets/a2bdef22-23e1-4494-9403-b12c891611a4)
+## DISEÑO APP MOQUPS
+![Diseño App Moqups](https://github.com/user-attachments/assets/ee457570-a547-4bc3-bdd3-135055ec5fad)
+## REUNIÓN EQUIPO DE TRABAJO
+![Imagen Reunión Equipo Trabajo Proyecto](https://github.com/user-attachments/assets/6fead968-de08-4f2a-ad3c-e77a008f0a05)
