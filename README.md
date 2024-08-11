@@ -14,7 +14,7 @@ Este proyecto pretende fomentar comportamientos más sostenibles y conscientes d
 | PANTALLA  | DESCIPCIÓN |
 | ------------- |:-------------:|
 | "Splash"      |      |
-|![1 Splash](https://github.com/user-attachments/assets/eaca9652-ad27-498a-9e31-03e9f96b74bf)      |Animación inicial de la aplicación con el logo de la aplicación.     |
+|![1 Splash](https://github.com/user-attachments/assets/eaca9652-ad27-498a-9e31-03e9f96b74bf)      |Animación inicial con el logo de la aplicación.     |
 |"Bienvenida"      |     |
 |![2 Bienvenida MainActivity](https://github.com/user-attachments/assets/17ae1619-658c-41ae-b1ad-65d4e4d2b0d2)  | Presentación inicial de la aplicación con el logo y breve video de introducción.   |
 | "Registro"      |     |
