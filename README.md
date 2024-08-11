@@ -22,7 +22,7 @@ Este proyecto pretende fomentar comportamientos más sostenibles y conscientes d
 |  "Inicio de Sesión"        |      |
 |![4 Inicio de Sesión](https://github.com/user-attachments/assets/bec8c47c-1182-49ca-be51-1f4003cba519)    | Donde los usuarios pueden iniciar sesión con una cuenta existente.    |
 | "Panel de Control/Dashboard"      |     |
-| ![5 Panel de Control](https://github.com/user-attachments/assets/a410933f-278e-4966-b1b4-cda063e89779)     | Vista principal después del inicio de sesión, mostrando un resumen de las actividades recientes de la plantación, estadísticas y acceso rápido a otras funcionalidades. Dos (2) tableros de control sobre: Árboles Plantados y Nivel de Oxígeno).     |
+| ![5 Panel de Control](https://github.com/user-attachments/assets/a410933f-278e-4966-b1b4-cda063e89779)     | Vista principal después del inicio de sesión, mostrando un resumen de las actividades recientes de la plantación, estadísticas y acceso rápido a otras funcionalidades. Dos (2) tableros de control sobre: Árboles Plantados y Nivel de Oxígeno.     |
 | "Perfil de Usuario"      |      |
 | ![6 Perfil del Usuario](https://github.com/user-attachments/assets/d3060954-a906-4bb1-9672-87cb8aa3a007)    | Sección donde los usuarios pueden ver y editar su información personal, incluyendo preferencias y configuraciones de notificaciones.    |
 | "Registro de Actividades de la Plantación"      |      |
@@ -30,14 +30,23 @@ Este proyecto pretende fomentar comportamientos más sostenibles y conscientes d
 | "Historial y Edición de Actividades"      |      |
 | ![8 Historial de Actividades](https://github.com/user-attachments/assets/f421f983-c98e-4ba1-a204-56ee4fc4c6f7)     | Lista o tabla que muestra todas las secciones de la plantación registradas por el usuario, con opciones para editar o eliminar entradas.     |
 | "Estadísticas y Progreso"      |      |
-| ![9 Estadísticas](https://github.com/user-attachments/assets/66ef9ec9-ac72-4fdb-ba11-4a07a607f1c8)      | Gráficos y estadísticas visuales que muestran el progreso del usuario en términos de árboles plantados, áreas cubiertas y el impacto ambiental estimado (captura de carbono, etc.).     |
-| left baz      | right baz     |
-| left baz      | right baz     |
-| left baz      | right baz     |
-| left baz      | right baz     |
-| left baz      | right baz     |
-| left baz      | right baz     |
-
+| ![9 Estadísticas](https://github.com/user-attachments/assets/66ef9ec9-ac72-4fdb-ba11-4a07a607f1c8)      | Gráficos y estadísticas visuales que muestran el progreso al usuario en términos de árboles plantados, áreas cubiertas y el impacto ambiental estimado (captura de carbono, etc.).     |
+| "Información Ambiental"      |      |
+| ![10 Información Ambiental](https://github.com/user-attachments/assets/a9f95ac3-b3a5-4361-87f7-dcd60dc20ce6)      | Sección dedicada para ofrecer datos educativos sobre los beneficios ambientales de la reforestación, como la conservación del suelo, la biodiversidad y la mitigación del cambio climático.     |
+| "Ejemplo 1 y 2 Información Ambiental"       |      |
+| ![10-1 Información Captura Carbono](https://github.com/user-attachments/assets/eeaac4f3-4249-4ace-9871-6d4ffdca5c0b)      | ![10-2 Información Calidad Suelo](https://github.com/user-attachments/assets/07ce0f24-75d5-4ed4-ab2a-cfce6a48982c)     |
+| "Consejos y Recomendaciones"      |      |
+| ![11 Consejos](https://github.com/user-attachments/assets/532227ce-a1f1-474a-80f5-f6228f0c657a)      | Página donde se presentan consejos prácticos y recomendaciones para mejorar la efectividad de las actividades de la plantación y el cuidado de los árboles.     |
+| "Ejemplo 1 y 2 Consejos"     |      |
+| ![11-1 Consejo Planificación](https://github.com/user-attachments/assets/0edd86d6-bf8a-4044-87b7-11e65ca7f630)      | ![11-2 Consejo Manejo Plantas](https://github.com/user-attachments/assets/4d0ab367-a39d-4bce-a72d-de2a417f4444)     |
+| "Comunidad y Redes Sociales"      |      |
+| ![12 Redes Sociales](https://github.com/user-attachments/assets/5eaeedc4-9771-4ae7-a9e9-ce40d9550262)      | Espacio donde los usuarios pueden conectarse entre sí, compartir fotos, experiencias y participar en discusiones relacionadas con la reforestación.     |
+| "Notificaciones y Recordatorios"      |      |
+| ![12 Redes Sociales](https://github.com/user-attachments/assets/aa6c2c8d-d36b-4444-a2db-0e3a90d91705)      | Configuración de recordatorios para mantenimiento de árboles plantados y notificaciones sobre eventos o desafíos comunitarios.     |
+| "Notificaciones y Recordatorios - Buscador"      |      |
+| ![13-1 Notificaciones - Buscar](https://github.com/user-attachments/assets/3d842223-acf0-4b0b-ad98-551f660ebab5)      |Animación inicial de la aplicación con el logo de la aplicación.     |
+| "Exportar Datos"      |      |
+| ![14 Exportar Datos](https://github.com/user-attachments/assets/a6b0254f-9474-43bb-ad6c-504eda46dcd6)      | Funcionalidad para exportar datos de la plantación en formatos como CSV o PDF para análisis personal o generación de informes para la toma de decisiones.     |
 
 
 
