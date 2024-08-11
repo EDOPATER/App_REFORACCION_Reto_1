@@ -8,3 +8,5 @@ El objetivo principal de la aplicación es promover y facilitar la reforestació
 Este proyecto pretende fomentar comportamientos más sostenibles y conscientes del medio ambiente a través de una aplicación móvil intuitiva y fácil de usar. Se espera que, al proporcionar a los usuarios una plataforma para hacer un seguimiento de sus actividades y recibir retroalimentación en forma de estadísticas y consejos, puedan mejorar sus prácticas a lo largo del tiempo.
 
 ## DIAGRAMA DEL FUNCIONAMIENTO DE LA APP REFORACCIÓN 
+![Diagrama UML Proyecto App REFORACCIÓN](https://github.com/user-attachments/assets/8e00f6ef-6565-4728-b804-e65e9e908799)
+
