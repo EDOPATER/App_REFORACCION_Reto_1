@@ -1,5 +1,6 @@
 package com.edopater.app_reforaccion_reto_1;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
@@ -17,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         //Enlazar la variable real con la Lógica
-        ImageView imagen1 = findViewById(R.id.imagen1);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView imagen1 = findViewById(R.id.imagen1);
         ImageView imagen2 = findViewById(R.id.imagen2);
 
         //Agregar la animación de salida o solidificación

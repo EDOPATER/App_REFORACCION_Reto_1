@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estilo de apariencia para bordes redondeados -->
+    <style name="ShapeAppearance.Round">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item> <!-- Ajusta el tamaño del radio según sea necesario -->
+    </style>
+
+    <style name="ShapeAppearance">ShapeAppearance</style>
+</resources>
