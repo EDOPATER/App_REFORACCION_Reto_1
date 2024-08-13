@@ -34,11 +34,11 @@ Este proyecto pretende fomentar comportamientos más sostenibles y conscientes d
 | "Información Ambiental"      |      |
 | ![10 Información Ambiental](https://github.com/user-attachments/assets/a9f95ac3-b3a5-4361-87f7-dcd60dc20ce6)      | Sección dedicada para ofrecer datos educativos sobre los beneficios ambientales de la reforestación, como la conservación del suelo, la biodiversidad y la mitigación del cambio climático.     |
 | "Ejemplo 1 y 2 Información Ambiental"       |      |
-| <img src="https://github.com/user-attachments/assets/eeaac4f3-4249-4ace-9871-6d4ffdca5c0b" width="230">| <img src="https://github.com/user-attachments/assets/07ce0f24-75d5-4ed4-ab2a-cfce6a48982c" width="210">|
+| <img src="https://github.com/user-attachments/assets/eeaac4f3-4249-4ace-9871-6d4ffdca5c0b" width="230">| <img src="https://github.com/user-attachments/assets/07ce0f24-75d5-4ed4-ab2a-cfce6a48982c" width="190">|
 | "Consejos y Recomendaciones"      |      |
 | ![11 Consejos](https://github.com/user-attachments/assets/532227ce-a1f1-474a-80f5-f6228f0c657a)      | Página donde se presentan consejos prácticos y recomendaciones para mejorar la efectividad de las actividades de la plantación y el cuidado de los árboles.     |
 | "Ejemplo 1 y 2 Consejos"     |      |
-| <img src="https://github.com/user-attachments/assets/0edd86d6-bf8a-4044-87b7-11e65ca7f630" width="230"> |  <img src="https://github.com/user-attachments/assets/4d0ab367-a39d-4bce-a72d-de2a417f4444" width="210"> |
+| <img src="https://github.com/user-attachments/assets/0edd86d6-bf8a-4044-87b7-11e65ca7f630" width="230"> |  <img src="https://github.com/user-attachments/assets/4d0ab367-a39d-4bce-a72d-de2a417f4444" width="190"> |
 | "Comunidad y Redes Sociales"      |      |
 | ![12 Redes Sociales](https://github.com/user-attachments/assets/5eaeedc4-9771-4ae7-a9e9-ce40d9550262)      | Espacio donde los usuarios pueden conectarse entre sí, compartir fotos, experiencias y participar en discusiones relacionadas con la reforestación.     |
 | "Notificaciones y Recordatorios"      |      |
