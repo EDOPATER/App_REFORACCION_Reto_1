@@ -227,4 +227,28 @@ public class FileManager {
         }
         return adviceList;
     }
+
+    public Usuario findUserByEmail(String email) {
+        if (userFile == null) {
+            Toast.makeText(context, "Archivo de usuarios no disponible", Toast.LENGTH_LONG).show();
+            return null;
+        }
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(userFile));
+            String data;
+            while ((data = reader.readLine()) != null) {
+                // Convertimos el dato leído en un objeto de tipo Usuario
+                Usuario dbUser = new Gson().fromJson(data, Usuario.class);
+                // Comparamos el correo electrónico
+                if (dbUser.correo != null && dbUser.correo.equals(email)) {
+                    return dbUser; // Si encontramos el usuario, lo retornamos
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            Toast.makeText(context, "Error al leer el archivo " + userFile.getName() + ": " + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+        return null; // Si no se encuentra el usuario, retornamos null
+    }
+
 }
