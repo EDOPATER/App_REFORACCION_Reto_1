@@ -84,14 +84,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
-                android:layout_height="29dp"
-                android:layout_weight="1"
-                android:text="Recuperar Contraseña"
+                android:layout_height="30dp"
+                android:text="¿Has Olvidado Tu Contraseña?"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_primary_dark"
                 android:textSize="20sp"
