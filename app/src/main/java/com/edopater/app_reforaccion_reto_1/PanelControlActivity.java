@@ -142,7 +142,7 @@ public class PanelControlActivity extends AppCompatActivity {
     private void setupPieChar1() {
         ArrayList<PieEntry> entries = new ArrayList<>();
         entries.add(new PieEntry(40f, "Plantaciones"));
-        entries.add(new PieEntry(30f, "Plantados"));
+        entries.add(new PieEntry(30f, "Sembrados"));
         entries.add(new PieEntry(20f, "Especies"));
         entries.add(new PieEntry(10f, "Otros"));
 
