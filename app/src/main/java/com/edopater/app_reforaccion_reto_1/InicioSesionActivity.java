@@ -1,6 +1,8 @@
 package com.edopater.app_reforaccion_reto_1;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -26,7 +28,9 @@ public class InicioSesionActivity extends AppCompatActivity {
     private String expectedNombre;
     private String expectedApellidos;
     private Button A_panelControl;
+    private TextView recuperarContrasena;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,8 @@ public class InicioSesionActivity extends AppCompatActivity {
         // Inicializar los EditText
         correo= findViewById(R.id.correoEditText);
         contrasena = findViewById(R.id.contrasenaEditText);
+
+        recuperarContrasena = findViewById(R.id.textView9);
 
         // Obtener los valores pasados por Intent
         Intent intent = getIntent();
@@ -84,6 +90,14 @@ public class InicioSesionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 login();
+            }
+        });
+
+        recuperarContrasena.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(InicioSesionActivity.this, RecuperarContrasenaActivity.class);
+                startActivity(next);
             }
         });
 

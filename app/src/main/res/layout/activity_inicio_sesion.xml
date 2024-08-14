@@ -80,7 +80,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="39dp"
+            android:layout_height="43dp"
             android:layout_marginTop="20dp"
             android:orientation="vertical">
 
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Ingrese su Correo Electrónico"
+                android:hint="Ingresa Tu Correo Electrónico"
                 android:inputType="textEmailAddress"
                 android:textAlignment="center" />
         </LinearLayout>
@@ -97,7 +97,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="43dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <EditText
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Ingrese su Contraseña"
+                android:hint="Ingresa Tu Contraseña"
                 android:inputType="textPassword"
                 android:textAlignment="center"
                 android:textSize="20sp" />
@@ -122,29 +122,12 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="273dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginStart="130dp"
-                android:layout_weight="1"
-                android:text="Recordarme"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/buttonInicio"
@@ -156,31 +139,40 @@
                 android:textSize="24sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:gravity="center">
 
-            <EditText
-                android:id="@+id/editTextTextOlvidoPass"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="40"
-                android:hint="¿Ha Olvidado su Contraseña?"
+        <Button
+            android:id="@+id/buttonVolverReg"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#2E7D32"
+            android:text="Registro"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="¿Has Olvidado Tu Contraseña?"
                 android:textAlignment="center"
-                android:inputType="textPassword" />
-
-            <Button
-                android:id="@+id/buttonVolverReg"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="#2E7D32"
-                android:text="Registro"
-                android:textSize="24sp" />
-
-        </LinearLayout>
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+    </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
