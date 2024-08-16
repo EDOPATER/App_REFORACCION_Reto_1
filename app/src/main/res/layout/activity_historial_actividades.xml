@@ -66,18 +66,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="41dp"
+            android:layout_height="40dp"
             android:orientation="horizontal">
-
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Especie y Variedad"
-                android:textAlignment="center"
-                android:textSize="18sp" />
-
+                android:textSize="16sp" />
             <EditText
                 android:id="@+id/editTextText2"
                 android:layout_width="wrap_content"
@@ -85,37 +82,34 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Ingrese Información"
-                android:inputType="textEmailAddress"
-                android:textAlignment="gravity"
+                android:inputType="text"
                 android:textSize="20sp" />
         </LinearLayout>
 
+        <!-- Repitiendo estructuras similares para cada campo necesario -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="15dp"
             android:orientation="horizontal">
-
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Fecha de Siembra"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
+                android:textSize="16sp" />
             <EditText
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/fechaSiembra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:hint="Ingrese Información"
+                android:hint="Seleccione Fecha"
                 android:inputType="text"
-                android:textAlignment="gravity"
+                android:focusable="false"
                 android:textSize="20sp" />
         </LinearLayout>
+
+        <!-- Repita lo anterior para los otros campos como ubicación, cantidad, altura, etc. -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Ubicación Geográfica"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:textSize="16sp" />
 
             <EditText
@@ -151,24 +145,51 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textCantidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Altura y Diámetro"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                android:text="Cantidad de Siembra"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/cantidadSiembra"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Ingrese Cantidad"
+                android:inputType="text|number"
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textAltura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="Altura Árboles"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/altura"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
                 android:ems="10"
-                android:hint="Ingrese Información"
-                android:inputType="textPassword"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                android:hint="Ingrese Información en Metros"
+                android:inputType="text|number"
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -183,56 +204,51 @@
                 android:layout_height="29dp"
                 android:layout_weight="1"
                 android:text="Fecha del Registro"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword3"
+                android:id="@+id/fechaRegistro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Ingrese Fecha"
-                android:inputType="textPassword"
-                android:textAlignment="center"
+                android:hint="Ingrese Fecha de Registro"
+                android:inputType="text"
+                android:focusable="false"
+                android:textAlignment="viewStart"
                 android:textSize="20sp" />
         </LinearLayout>
 
+        <!-- Botón para actualizar datos -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_marginTop="15dp"
-            android:orientation="horizontal">
-
+            android:orientation="vertical"
+            android:gravity="center">
             <Button
-                android:id="@+id/buttonReg_Datos"
+                android:id="@+id/buttonActualizarDatos"
                 android:layout_width="288dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="65dp"
-                android:layout_marginTop="3dp"
+                android:layout_height="50dp"
                 android:backgroundTint="#2E7D32"
                 android:text="Actualizar Datos"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
+        <!-- Botón para volver al menú de opciones -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
-
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:gravity="center">
             <Button
                 android:id="@+id/buttonVolverPanel"
                 android:layout_width="288dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="65dp"
-                android:layout_marginTop="3dp"
+                android:layout_height="50dp"
                 android:backgroundTint="#2E7D32"
                 android:text="Menú de Opciones"
-                android:textSize="24sp" />
-
+                android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>

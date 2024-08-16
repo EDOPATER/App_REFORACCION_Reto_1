@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Calendar;
+import android.content.SharedPreferences;
 
 public class RegistroActividadesPActivity extends AppCompatActivity {
 
@@ -37,36 +37,18 @@ public class RegistroActividadesPActivity extends AppCompatActivity {
         btnVolverPanel = findViewById(R.id.buttonVolverPanel);
 
         // Deshabilita la entrada directa y muestra el DatePickerDialog al hacer clic
-        etFechaSiembra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mostrarDatePickerDialog(etFechaSiembra);
-            }
-        });
+        etFechaSiembra.setOnClickListener(v -> mostrarDatePickerDialog(etFechaSiembra));
 
-        etFechaRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mostrarDatePickerDialog(etFechaRegistro);
-            }
-        });
+        etFechaRegistro.setOnClickListener(v -> mostrarDatePickerDialog(etFechaRegistro));
 
         // Manejar el botón de Volver al Panel
-        btnVolverPanel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent back = new Intent(RegistroActividadesPActivity.this, PanelControlActivity.class);
-                startActivity(back);
-            }
+        btnVolverPanel.setOnClickListener(v -> {
+            Intent back = new Intent(RegistroActividadesPActivity.this, PanelControlActivity.class);
+            startActivity(back);
         });
 
         // Manejar el botón de Registrar Datos
-        btnRegistrarDatos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registrarDatos();
-            }
-        });
+        btnRegistrarDatos.setOnClickListener(v -> registrarDatos());
     }
 
     // Método para mostrar el DatePickerDialog
@@ -78,13 +60,10 @@ public class RegistroActividadesPActivity extends AppCompatActivity {
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 RegistroActividadesPActivity.this,
-                new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        month = month + 1;  // Los meses en DatePicker comienzan desde 0
-                        String fechaSeleccionada = dayOfMonth + "/" + month + "/" + year;
-                        editText.setText(fechaSeleccionada);
-                    }
+                (view, year, month, dayOfMonth) -> {
+                    month = month + 1;  // Los meses en DatePicker comienzan desde 0
+                    String fechaSeleccionada = dayOfMonth + "/" + month + "/" + year;
+                    editText.setText(fechaSeleccionada);
                 }, anio, mes, dia);
 
         datePickerDialog.show();
@@ -107,12 +86,20 @@ public class RegistroActividadesPActivity extends AppCompatActivity {
             return;
         }
 
-        // Aquí puedes almacenar los datos en una base de datos o enviarlos a un servidor
-        // Por simplicidad, los mostraremos en un Toast
-        String registro = "Especie: " + especieVariedad + "\nFecha de Siembra: " + fechaSiembra +
-                "\nUbicación: " + ubicacionGeografica + "\nCantidad de Siembra: " + cantidadSiembra + "\nAltura/Diámetro: " + alturaDiametro +
-                "\nFecha de Registro: " + fechaRegistro;
+        // Guardar los datos en SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("ActividadesPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        Toast.makeText(this, "Datos Registrados:\n" + registro, Toast.LENGTH_LONG).show();
+        editor.putString("especieVariedad", especieVariedad);
+        editor.putString("fechaSiembra", fechaSiembra);
+        editor.putString("ubicacionGeografica", ubicacionGeografica);
+        editor.putString("cantidadSiembra", cantidadSiembra);
+        editor.putString("alturaDiametro", alturaDiametro);
+        editor.putString("fechaRegistro", fechaRegistro);
+
+        editor.apply();  // Usamos apply() en lugar de commit() porque es asíncrono
+
+        // Mostrar un mensaje de éxito
+        Toast.makeText(this, "Datos registrados exitosamente", Toast.LENGTH_SHORT).show();
     }
 }
